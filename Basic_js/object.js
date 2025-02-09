@@ -95,3 +95,14 @@ JsUser.greetingTwo = function(){
 }
 
 console.log(JsUser.greetingTwo());
+
+// Object Destructuring and JSON APIs
+
+const course = {
+    name: 'React - The Complete Guide',
+    price: "999",
+    courseInstructor: "Aayush"
+}
+
+const {courseInstructor : instructor} = course
+console.log(instructor);
