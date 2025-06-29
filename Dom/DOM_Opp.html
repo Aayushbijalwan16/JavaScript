@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Aur DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+
+<script> // Operation using DOM Manupulation
+    function addlanguage(langName){
+        const li = document.createElement('li');
+         li.innerHTML = `${langName}`
+         document.querySelector('.language')
+         .appendChild(li)
+    }
+    addlanguage('Python')
+    addlanguage('Java')
+
+    // optimisation 
+
+    function addlanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage('Golang')
+    addlanguage('Swift')
+
+
+    //Edit
+    const seconndLang = document.querySelector("li:nth-child(2)")
+    const newli = (document.createElement('li'))
+    newli.textContent = "Munna"
+    seconndLang.replaceWith(newli)
+
+    // Remove
+
+    const lastlang = document.querySelector("li:last-child")
+    lastlang.remove()
+</script>
+</html>

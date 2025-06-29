@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events || Js</title>
+</head>
+<body style="background-color: #414141;">
+    <h1 style="color: aliceblue;">Our collection</h1>
+    <div id="images">
+        <li><img src="./assest/1.jpg" alt="photshop" id="uki" width="200px" height="200px"></li>
+        <li><img src="./assest/2.jpg" alt="photshop" id="moon" width="200px" height="200px"></li>
+        <li><img src="./assest/3.jpg" alt="photshop" id="mountain" width="200px" height="200px"></li>
+        <li><img src="./assest/4.jpg" alt="photshop" id="sky" width="200px" height="200px"></li>
+        <li> <a href="https://google.com" style="color: antiquewhite; text-decoration: none;" id="google">Google</a></li>
+    </div>
+</body>
+<script>
+    // All events in js run in sequently 
+
+    //document.getElementById('id').onclick = function (){
+    //    alert("message")   }
+
+    // Normal approach
+//     document.getElementById('uki').onclick = () => {
+//         alert("Uttakrashi")
+//     }
+    
+    // best approach
+    //document.getElementById('id').addEventListener('click', () => {
+    //    alert('mesaage')
+    // })
+
+    document.getElementById('sky').addEventListener('click', () => {
+        alert('sky clicked')
+    })
+
+//     //attachEvent() was used  instead of addEventListener . This was used in Internet Explorer
+    
+//     // Important events Objects
+//     // type, timestamp, deafultPrevented
+//     // target, toElement, srcElement, currentTarget,
+//     // clientX, clientY, screenX, screenY
+//     // altkey, ctrlkey, shiftkey, keycode
+
+//     // Event propogation (bubbling)
+// document.getElementById('images').addEventListener('click', (e) => {
+//         console.log('clicked inside the list');
+//     }, false)
+
+//     document.getElementById('moon').addEventListener('click', (e) => {
+//         console.log('moon clicked');
+//     }, false)
+
+//     // Event propogation (capturing)
+// document.getElementById('images').addEventListener('click', (e) => {
+//         console.log('clicked inside the list');
+//     }, true)
+
+//     document.getElementById('sky').addEventListener('click', (e) => {
+//         console.log('sky clicked');
+//     }, true)
+//      // Event Stop propogation
+// document.getElementById('images').addEventListener('click', (e) => {
+//         console.log('clicked inside the list');
+//     }, false)
+
+//     document.getElementById('sky').addEventListener('click', (e) => {
+//         console.log('sky clicked');
+//         e.stopPropagation()
+//     }, false)
+
+
+    // preventDefault
+    // document.getElementById('google').addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     e.stopPropagation() 
+    //     console.log('google clicked');
+    // }, false)
+
+
+   document.querySelector('#images').addEventListener('click', (e) =>{
+    // console.log(e.target.parentNode);
+    console.log(e.target.tagName);
+    if (e.target.tagName === 'IMG') {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+    
+   })
+
+</script>
+</html>
