@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript with Aayush</h1>
+    <!-- <button id="start">Start</button> -->
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //setInterval Function
+    const sayDate = (str) => {
+        console.log(str, Date.now());
+    };
+    const intervalID = setInterval(sayDate, 1000, "hi");
+    console.log();
+    
+
+    // clearInterval
+    // clearInterval(intervalID)
+
+    // Functions of button
+    // let intervalId
+    const stopPrinting = () => {
+        clearInterval(intervalID);
+        // intervalID = null;
+    }
+    document.querySelector("#stop").addEventListener('click', stopPrinting);
+
+    // document.querySelector("#start").addEventListener('click', );
+    
+</script>
+</html>
