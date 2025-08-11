@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quote Generator</title>
+    <title>Quote Generator</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Quote of The Day</h1>
-        <blockquote id="quote">loading</blockquote>
-        <span id="author">loading</span>
-        <div>
-        <button onclick="getQuote(api_url)">New Quote</button>
-        <button onclick="tweet()">
-            <img src="img/download.webp" > Twitter</img>
-        </button>
+    <div class="hero">
+        <div class="container">
+                <h1>Quote of The Day</h1>
+                <blockquote id="quote">loading</blockquote>
+                <span id="author">loading</span>
+            <div>
+                <button onclick="getQuote(api_url)">New Quote</button>
+                <button onclick="tweet()">
+                    <img src="img/download.webp" > Twitter</img>
+                </button>
+            </div>
         </div>
+        <footer class="ftr"> Designed by-<a href="http://www.linkedin.com/in/aayushbijalwan16">Aayush Bijalwan</a></footer>
     </div>
-    <!-- <div class="footer">
-          <p>&copy; 2025 Aayush Bijalwan. All Rights Reserved.</p>
-    </div> -->
     <script src="script.js"></script>
 </body>
 </html>
