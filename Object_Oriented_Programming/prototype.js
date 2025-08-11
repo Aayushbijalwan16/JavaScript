@@ -1,4 +1,3 @@
-const { log } = require("console")
 
 // new keyword inside the object
 function createUser(username, score) {
